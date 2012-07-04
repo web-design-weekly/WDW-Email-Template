@@ -66,7 +66,7 @@
 	}
 	td.contentblock h4 p a{
 	  color:#0066cc;
-		font-weight:bold;
+	font-weight:bold;
 	}
 	td.contentblock p { 
 	  color:#888888;
@@ -110,8 +110,28 @@
    text-decoration: none;
    font-weight: bold;
  }
-  
-	@media only screen and (max-device-width: 480px) {
+
+
+ td.floated-copy{
+ 	padding:20px 20px 0 0;
+ }
+
+
+tr.advertisement p { 
+  	color:#888888;
+	font-size:10px;
+	line-height:10px;
+	font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+	margin-top:0;
+	margin-left:20px;
+	margin-bottom:10px;
+	padding-top:0;
+	padding-bottom:0;
+	font-weight:normal;
+	}
+
+
+  	@media only screen and (max-device-width: 480px) {
 	     div[class="header"] {
 	          font-size: 16px !important;
 	     }
@@ -150,6 +170,15 @@
 			margin-bottom: 0px !important;
 			font-size: 18px !important;
 		}
+
+		 td.floated-copy{
+		 	padding: 20px !important;
+		 }
+		  
+		 td.floated-image{
+		 	display: none;
+		 }
+
 	}
 	</style>
 </head>
@@ -244,7 +273,36 @@
 			</table>  
 			<img border="0" src="images/spacer.gif" width="1" height="10" class="divider"><br>
 			</layout>
-		
+			<layout label="Advertisement">
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				
+					
+			<tr>
+				<td width="100%" bgcolor="#ffffff">
+					<table width="100%" cellpadding="20" cellspacing="0" border="0">
+					<tr>
+						
+						<td bgcolor="#ffffff" class="contentblock floated-image" valign="top">
+							<img editable="true" src="http://placehold.it/125x125" width="125" label='Advertsiment' style="border: 0;" />
+						</td>
+						<td class="floated-copy contentblock" valign="top">
+							
+							<h3 class="secondary"><singleline label="Title"><a href="#">Title of Advertisement</a></singleline></h3>
+							<multiline label="Description"><p>A short explanation about Advertisement <a href="#" class="from-link">(website.com)</a></p></multiline>
+
+						</td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+			<tr class="advertisement">
+				<td  width="100%" bgcolor="#ffffff">
+					<p>/* Advertisement */</p>
+				</td>
+				</tr>
+			</table>  
+			<img border="0" src="images/spacer.gif" width="1" height="10" class="divider"><br>
+			</layout>
 		</repeater>           
 		
 		</td>
